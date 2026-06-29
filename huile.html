@@ -1,0 +1,460 @@
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farjallah Auto</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/huile.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font Awesome (important pour hamburger + dropdown icon) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+ 
+<!-- NAV -->
+  <nav class="navbar">
+
+        <div class="logo">
+         <img src="images/ihab-new (2).png" class="img-ihab" alt="logo">
+            <span>Farjallah Auto</span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="about.html">À propos</a></li>
+
+            <li class="dropdown">
+                <a href="#">Pièces <i class="fa fa-chevron-down"></i></a>
+
+                <ul class="dropdown-menu">
+                    <li><a href="piece.html">Freinage</a></li>
+                    <li><a href="piece.html">Embrayage</a></li>
+                    <li><a href="piece.html">Suspension</a></li>
+                    <li><a href="piece.html">Carburant</a></li>
+                </ul>
+            </li>
+
+            <li><a href="huile.html">Huiles</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="menu-toggle">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+<div class="header-btn">
+    <a href="https://wa.me/21600000000" class="theme-btn">
+        Discutez sur WhatsApp 
+        <i class="fa-solid fa-arrow-right"></i>
+    </a>
+</div>
+    </nav>
+<!-- FILTER BAR -->
+<div class="filter-bar">
+  <span class="filter-label">Filtrer :</span>
+  <button class="filter-btn active">Tous</button>
+  <button class="filter-btn">5W-30</button>
+  <button class="filter-btn">5W-40</button>
+  <button class="filter-btn">10W-40</button>
+  <button class="filter-btn">0W-20</button>
+  <button class="filter-btn">Full Synthèse</button>
+  <button class="filter-btn">Semi-synthèse</button>
+  <button class="filter-btn">Minérale</button>
+</div>
+ 
+<!-- MAIN -->
+<div class="main">
+ 
+   <div class="text-center mt-5 pt-5">
+      <h1 style="font-weight: bold; color: blue;">Nos Huiles</h1>
+        </div>
+ 
+  <div class="grid mt-5 pt-5">
+ 
+    <!-- Card 1 -->
+   <div class="card">
+  <span class="card-badge badge-top">Best-seller</span>
+
+  <div class="card-img">
+    <img src="images/gastrol-1.jpg" alt="Huile Castrol">
+  </div>
+
+  <div class="card-body">
+    <span class="card-brand">Castrol</span>
+    <div class="card-name">EDGE Titanium FST 5W-40</div>
+    <span class="card-viscosity">5W-40 · 5L</span>
+
+    <div class="card-specs">
+      <span class="spec-tag">Full Synthèse</span>
+      <span class="spec-tag">Essence / Diesel</span>
+    </div>
+  </div>
+ <div class="card-footer">
+             <button class="btn-add">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+         En Stock
+        </button>
+      </div>
+</div>
+ 
+    <!-- Card 2 -->
+    <div class="card">
+      <span class="card-badge badge-promo">-15%</span>
+     <div class="card-img">
+    <img style="height: 110px;" width="110px" src="images/total-2.jpg" alt="Huile Castrol">
+  </div>
+      <div class="card-body">
+        <span class="card-brand">Total</span>
+        <div class="card-name">Extended Life 5W-30</div>
+        <span class="card-viscosity">5W-30 · 5L</span>
+        <div class="card-specs">
+          <span class="spec-tag">Full Synthèse</span>
+          <span class="spec-tag">Longue durée</span>
+        </div>
+      </div>
+      <div class="card-footer">
+                <button class="btn-add">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          En Stock
+        </button>
+      </div>
+    </div>
+ 
+    <!-- Card 3 -->
+    <div class="card">
+      <span class="card-badge badge-new">Nouveau</span>
+      <div class="card-img">
+    <img style="height: 110px;" class="mt-3 pt-2" width="50px" src="images/shell-1.jpg" alt="Huile Castrol">
+  </div>
+      <div class="card-body">
+        <span class="card-brand">Shell</span>
+        <div class="card-name">Shell Ultra ECT 0W-20</div>
+        <span class="card-viscosity">0W-20 · 4L</span>
+        <div class="card-specs">
+          <span class="spec-tag">Full Synthèse</span>
+          <span class="spec-tag">Hybride</span>
+        </div>
+      </div>
+      <div class="card-footer">
+               <button class="btn-add">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+         En Stock
+        </button>
+      </div>
+    </div>
+    <!-- Card 4 -->
+    <div class="card">
+      <div class="card-img">
+    <img style="height: 130px;" width="120px" src="images/mannol-1.jpg" alt="Huile Castrol">
+  </div>
+      <div class="card-body">
+        <span class="card-brand">Total Quartz</span>
+        <div class="card-name">7000 Diesel 10W-40</div>
+        <span class="card-viscosity">10W-40 · 5L</span>
+        <div class="card-specs">
+          <span class="spec-tag">Semi-synthèse</span>
+          <span class="spec-tag">Diesel</span>
+        </div>
+      </div>
+      <div class="card-footer">
+               <button class="btn-add">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+         En Stock
+        </button>
+      </div>
+    </div>  
+  </div><!-- /grid -->
+   <div class="text-center mt-5 pt-5">
+      <h1 style="font-weight: bold; color: blue;">Nos Filtre</h1>
+        </div>
+        <div class="grid mt-5 pt-5">
+ 
+    <!-- Card 1 -->
+   <div class="card">
+  <span class="card-badge badge-top">Best-seller</span>
+
+    <div class="card-img">
+    <img src="images/filtre-1.jpg" class="mt-5" alt="Huile Castrol">
+  </div>
+
+  <div class="card-body">
+    <span class="card-brand">Castrol</span>
+    <div class="card-name">EDGE Titanium FST 5W-40</div>
+    <span class="card-viscosity">5W-40 · 5L</span>
+
+    <div class="card-specs">
+      <span class="spec-tag">Full Synthèse</span>
+      <span class="spec-tag">Essence / Diesel</span>
+    </div>
+  </div>
+ <div class="card-footer">
+             <button class="btn-add">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+         En Stock
+        </button>
+      </div>
+</div>
+ 
+    <!-- Card 2 -->
+    <div class="card">
+      <span class="card-badge badge-promo">-15%</span>
+     <div class="card-img">
+    <img style="height: 110px;" width="110px" src="images/filtre-2.jpg" alt="Huile Castrol">
+  </div>
+      <div class="card-body">
+        <span class="card-brand">Total</span>
+        <div class="card-name">Extended Life 5W-30</div>
+        <span class="card-viscosity">5W-30 · 5L</span>
+        <div class="card-specs">
+          <span class="spec-tag">Full Synthèse</span>
+          <span class="spec-tag">Longue durée</span>
+        </div>
+      </div>
+      <div class="card-footer">
+              <button class="btn-add">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+         En Stock
+        </button>
+      </div>
+    </div>
+ 
+    <!-- Card 3 -->
+    <div class="card">
+      <span class="card-badge badge-new">Nouveau</span>
+      <div class="card-img">
+    <img style="height: 110px;" width="70px" class="mt-5" src="images/filtre-3.jpg" alt="Huile Castrol">
+  </div>
+      <div class="card-body">
+        <span class="card-brand">Shell</span>
+        <div class="card-name">Shell Ultra ECT 0W-20</div>
+        <span class="card-viscosity">0W-20 · 4L</span>
+        <div class="card-specs">
+          <span class="spec-tag">Full Synthèse</span>
+          <span class="spec-tag">Hybride</span>
+        </div>
+      </div>
+      <div class="card-footer">
+             <button class="btn-add">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+         En Stock
+        </button>
+      </div>
+    </div>
+    <!-- Card 4 -->
+    <div class="card">
+      <div class="card-img">
+    <img style="height: 130px;" width="120px" src="images/filtre-5.png" alt="Huile Castrol">
+  </div>
+      <div class="card-body">
+        <span class="card-brand">Total Quartz</span>
+        <div class="card-name">7000 Diesel 10W-40</div>
+        <span class="card-viscosity">10W-40 · 5L</span>
+        <div class="card-specs">
+          <span class="spec-tag">Semi-synthèse</span>
+          <span class="spec-tag">Diesel</span>
+        </div>
+      </div>
+      <div class="card-footer">
+             <button class="btn-add">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+         En Stock
+        </button>
+      </div>
+    </div>  
+  </div>
+   <!-- INFO STRIP -->
+     <div class="text-center mt-5 pt-5">
+      <h1 style="font-weight: bold; color: blue;">Votre confiance, notre priorité</h1>
+        </div>
+  <div class="info-strip mt-5">
+        <div class="info-item">
+      <div class="info-icon">
+        <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </div>
+      <div class="info-text">
+        <strong>Livraison rapide</strong>
+        <span>Sous 24–48h partout en Tunisie</span>
+      </div>
+    </div>
+    <div class="info-item">
+      <div class="info-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <div class="info-text">
+        <strong>Produits garantis</strong>
+        <span>100% authentiques, d'origine</span>
+      </div>
+    </div>
+    <div class="info-item">
+      <div class="info-icon">
+        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.71 12 19.79 19.79 0 0 1 1.65 3.18 2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      </div>
+      <div class="info-text">
+        <strong>Conseil expert</strong>
+        <span>On vous aide à choisir la bonne huile</span>
+      </div>
+    </div>
+  </div>
+ 
+</div><!-- /main -->
+ <footer class="footer-section py-5">
+
+  <div class="container">
+
+    <div class="row g-4">
+
+      <!-- COL 1 -->
+      <div class="col-md-4 ps-5">
+
+        <img src="/images/logo-ihab.jpg" class="footer-logo mb-3">
+
+        <p class="footer-text">
+        Farjallah Auto vous propose un large choix de pièces automobiles, huiles moteur, 
+        peinture et accessoires pour toutes marques avec qualité, confiance et meilleur prix.
+        </p>
+   <div class="footer-social">
+          <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-btn"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <!-- COL 2 -->
+      <div class="col-md-4 ps-5">
+
+        <h5 class="footer-title">Navigation</h5>
+<ul class="footer-navigation">
+  <li>
+        <a class="footer-text">
+         <i class="fas fa-chevron-right"></i>
+    Accueil
+        </a>
+</li>
+<li>
+        <a class="footer-text">
+        <i class="fas fa-chevron-right"></i>
+        A Propos
+        </a>
+</li>
+<li>
+        <a class="footer-text">
+       <i class="fas fa-chevron-right"></i>
+        Services
+        <a>
+          </li>
+<li>
+        <a href="piece.html" class="footer-text">
+       <i class="fas fa-chevron-right"></i>
+       Pieces
+        </a>
+        </li>
+        <li>
+        <a href="huile.html" class="footer-text">
+       <i class="fas fa-chevron-right"></i>
+       Huiles
+        </a>
+        </li>
+          <li>
+        <a class="footer-text">
+       <i class="fas fa-chevron-right"></i>
+       Marques
+        </a>
+        </li>
+<li>
+        <a href="contact.html" class="footer-text">
+                <i class="fas fa-chevron-right"></i>
+      Contact
+        </a>
+        </li>
+</ul>
+      </div>
+
+      <!-- COL 3 -->
+      <div class="col-md-4 ps-5">
+
+        <h5 class="footer-title"> Farjallah auto</h5>
+
+        <p class="footer-text">
+          <i class="fa fa-map-marker-alt"></i>
+          Sousse, Tunisie
+        </p>
+<a href="" class="footer-text">
+        <p class="footer-text">
+          <i class="fa fa-phone" ></i>
+         99 44 44 76
+        </p></a>
+        <a href="https://wa.me/21612345678" class="footer-text">
+ <p class="footer-text">
+          <i class="fa-brands fa-whatsapp"></i>
+         73 44 03 07
+        </p></a>
+        <p class="footer-text">
+          <i class="fa fa-clock"></i>
+          08h00 - 18h00
+        </p>
+
+        <p class="footer-text">
+          <i class="fa fa-envelope"></i>
+          ihab.farjalah@gmail.com
+        </p>  
+        
+
+      </div>
+
+    </div>
+
+    <!-- BOTTOM -->
+    <div class="text-center mt-5 footer-bottom">
+      © 2026 Aut Farjallah. Tous droits réservés.
+    </div>
+
+  </div>
+
+</footer>
+<script>
+  // Filter buttons interactivity
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+ 
+  // Add to cart feedback
+  document.querySelectorAll('.btn-add').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const orig = btn.innerHTML;
+      btn.innerHTML = '✓ Ajouté';
+      btn.style.background = '#16a34a';
+      setTimeout(() => {
+        btn.innerHTML = orig;
+        btn.style.background = '';
+      }, 1500);
+    });
+  });
+</script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/huile.js"></script>
+<a href="https://wa.me/21600000000" class="whatsapp-btn" target="_blank">
+  <i class="bi bi-whatsapp"></i>
+</a>
+</body>
+</html>
+ 
