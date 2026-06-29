@@ -32,3 +32,22 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+/*faq*/
+document.addEventListener("DOMContentLoaded", () => {
+    const faqItems = document.querySelectorAll(".faq-box-new");
+
+    faqItems.forEach(item => {
+        const btn = item.querySelector(".faq-btn-new");
+
+        btn.addEventListener("click", () => {
+
+            // fermer les autres
+            faqItems.forEach(el => {
+                if (el !== item) el.classList.remove("active");
+            });
+
+            // toggle actuel
+            item.classList.toggle("active");
+        });
+    });
+});
