@@ -307,14 +307,17 @@ body{
     }
 }
 /* HERO */
+/* HERO */
 .hero{
     position: relative;
+    width: 100%;
     height: 100vh;
     overflow: hidden;
 }
 
 .hero-slide{
     position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     opacity: 0;
@@ -323,67 +326,67 @@ body{
 
 .hero-slide.active{
     opacity: 1;
-    z-index: 1;
+    z-index: 2;
 }
 
 .hero-slide img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
+}
+
+/* Overlay noir */
+.hero-slide::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+    z-index: 1;
 }
 
 .hero-content{
     position: absolute;
+    z-index: 3;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     color: white;
-    background: rgba(0,0,0,.5);
-    padding: 40px;
-    border-radius: 10px;
-    width: 80%;
+    width: 85%;
     max-width: 700px;
 }
 
 .hero-content h1{
-    font-size: 50px;
-    margin-bottom: 20px;
+    font-size: 55px;
     line-height: 1.2;
+    margin-bottom: 20px;
 }
 
 .hero-content p{
-    font-size: 20px;
-    margin-bottom: 20px;
+    font-size: 22px;
+    margin-bottom: 25px;
 }
 
 .btn{
+    display: inline-block;
     background: var(--yellow);
-    color: black;
-    text-decoration: none;
+    color: var(--blue);
     padding: 14px 35px;
     border-radius: 30px;
-    font-weight: bold;
-    transition: .4s;
+    text-decoration: none;
+    font-weight: 700;
+    transition: .3s;
 }
 
 .btn:hover{
-    transform: scale(1.1);
-}
-
-/* TITRES */
-section h2{
-    text-align: center;
-    font-size: 40px;
-    margin: 50px 0;
-    color: var(--blue);
+    transform: translateY(-3px);
 }
 
 /* TABLETTE */
 @media (max-width: 992px){
-    .hero-content{
-        width: 85%;
-        padding: 30px;
+    .hero{
+        height: 80vh;
     }
 
     .hero-content h1{
@@ -393,25 +396,20 @@ section h2{
     .hero-content p{
         font-size: 18px;
     }
-
-    .btn{
-        padding: 12px 28px;
-    }
-
-    section h2{
-        font-size: 32px;
-    }
 }
 
 /* MOBILE */
 @media (max-width: 768px){
     .hero{
-        height: 80vh;
+        height: 70vh;
+    }
+
+    .hero-slide img{
+        object-position: center center;
     }
 
     .hero-content{
         width: 90%;
-        padding: 25px;
     }
 
     .hero-content h1{
@@ -419,29 +417,19 @@ section h2{
     }
 
     .hero-content p{
-        font-size: 16px;
+        font-size: 15px;
     }
 
     .btn{
-        padding: 10px 24px;
+        padding: 10px 22px;
         font-size: 14px;
-    }
-
-    section h2{
-        font-size: 28px;
-        margin: 35px 0;
     }
 }
 
 /* PETIT MOBILE */
 @media (max-width: 480px){
     .hero{
-        height: 70vh;
-    }
-
-    .hero-content{
-        width: 95%;
-        padding: 20px;
+        height: 60vh;
     }
 
     .hero-content h1{
@@ -453,15 +441,10 @@ section h2{
     }
 
     .btn{
-        padding: 8px 20px;
+        padding: 8px 18px;
         font-size: 13px;
     }
-
-    section h2{
-        font-size: 24px;
-    }
 }
-
 /*sector*/
 .sector-section{
     background:#f4f6f9;
@@ -508,34 +491,37 @@ section h2{
 .sector-content{
     text-align:center;
     padding:20px;
+    display: flex;
+    flex-direction: column;
 }
 
-.sector-content h4{
-    margin-bottom:15px;
-    color:var(--dark);
+.sector-content a{
+    margin-bottom:24px;
+    color:var(--blue) !important;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+        text-underline-offset: 6px; /* espace entre texte et ligne */
+}
+.sector-content a:hover{
+color: var(--dark) !important;  
+font-weight: 400; 
 }
 
-.sector-content button{
-    border:none;
-    background:var(--blue);
-    color:white;
-    padding:10px 25px;
-    border-radius:25px;
-    cursor:pointer;
-    transition:.3s;
-}
 
-.sector-content button:hover{
-    background:var(--yellow);
-    color:black;
-}
+
+
 /*sector-btn*/
 .sector-btn{
   border:none;
   padding:10px 20px;
-  background:#f4b400;
+  background:#f4b400 !important;
   color:#fff;
   border-radius:30px;
+}
+.sector-btn:hover{
+    background:var(--dark) !important;
+    color: var(--white) !important;
 }
 
 .sector-details{
@@ -543,10 +529,10 @@ section h2{
 }
 
 .sector-text{
-  font-size:14px;
+  font-size:13px;
   line-height:1.8;
-  font-style: italic;
-  color: blue !important;
+   font-family: "Times New Roman", Times, serif;
+  color: var(--navy);
   font-weight: 600;
   margin:0;
 }
@@ -556,6 +542,15 @@ section h2{
     font-size:13px;
     line-height:1.6;
   }
+  .sector-btn{
+  border:none;
+ font-size: 15px;
+ margin: auto;
+ width: 120px;
+   background:#f4b400 !important;
+  color:#fff;
+  border-radius:30px;
+ }
 }
 /*marque*/
 .brands-section{
