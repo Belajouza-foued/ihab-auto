@@ -39,14 +39,107 @@ body {
   font-size: 1rem;
 }
 
+/* ==========================================================================
+   Layout : sidebar + contenu
+   ========================================================================== */
+
+.page-layout,
+.shop {
+  display: flex;
+  align-items: flex-start;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 5%;
+  gap: 24px;
+}
+
+/* ---- Sidebar ---- */
+.sidebar {
+  flex: 0 0 240px;
+  background: var(--blanc);
+  border-radius: 12px;
+  padding: 24px 20px;
+  margin-top: 40px;
+  box-shadow: 0 3px 10px rgba(11, 61, 145, 0.1);
+  position: sticky;
+  top: 20px;
+}
+
+.sidebar h2 {
+  font-size: 1.1rem;
+  color: var(--bleu);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+  border-bottom: 3px solid var(--jaune);
+}
+
+.sidebar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sidebar ul li a {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 8px;
+  color: var(--gris-texte);
+  text-decoration: none;
+  font-size: 0.92rem;
+  border-left: 3px solid transparent;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.sidebar ul li a:hover {
+  background: var(--gris-fond);
+  color: var(--bleu);
+  border-left-color: var(--jaune);
+  transform: translateX(2px);
+}
+
+.sidebar ul li a.active {
+  background: var(--bleu);
+  color: var(--blanc);
+  border-left-color: var(--jaune);
+  font-weight: 600;
+}
+
+/* Bouton toggle (visible en mobile seulement) */
+.sidebar-toggle {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  width: calc(100% - 10%);
+  margin: 16px 5% 0;
+  padding: 12px 16px;
+  background: var(--bleu);
+  color: var(--blanc);
+  border: none;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.sidebar-toggle i {
+  color: var(--jaune);
+}
+
+.sidebar-overlay {
+  display: none;
+}
+
 /* ---- Grille des produits ---- */
 .grid-container {
+  flex: 1;
+  min-width: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 24px;
-  padding: 40px 5%;
-  max-width: 1200px;
-  margin: 0 auto;
+  padding: 40px 0;
 }
 
 /* ---- Carte produit ---- */
@@ -82,6 +175,7 @@ body {
   object-fit: contain;
   object-position: center;
   display: block;
+  transition: transform 0.3s ease;
 }
 
 .product-card:hover .img-wrap img {
@@ -117,7 +211,68 @@ body {
   font-size: 0.9rem;
 }
 
-/* ---- Responsive ---- */
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+
+/* Tablette : sidebar plus étroite */
+@media (max-width: 1024px) {
+  .sidebar {
+    flex-basis: 200px;
+  }
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+}
+
+/* Petites tablettes / grands mobiles : sidebar devient un panneau escamotable */
+@media (max-width: 860px) {
+  .sidebar-toggle {
+    display: flex;
+  }
+
+  .page-layout,
+  .shop {
+    padding: 0 4%;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 78%;
+    max-width: 300px;
+    margin-top: 0;
+    border-radius: 0;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    overflow-y: auto;
+  }
+
+  .sidebar.is-open {
+    transform: translateX(0);
+  }
+
+  .sidebar-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(11, 61, 145, 0.45);
+    z-index: 999;
+  }
+
+  .sidebar-overlay.is-visible {
+    display: block;
+  }
+
+  .grid-container {
+    padding: 24px 0;
+  }
+}
+
 @media (max-width: 600px) {
   .page-head h1 {
     font-size: 1.6rem;
@@ -125,9 +280,14 @@ body {
   .grid-container {
     grid-template-columns: 1fr 1fr;
     gap: 14px;
-    padding: 24px 4%;
+    padding: 20px 0;
   }
   .card-info h2 {
+    font-size: 0.9rem;
+  }
+  .sidebar-toggle {
+    width: calc(100% - 8%);
+    margin: 14px 4% 0;
     font-size: 0.9rem;
   }
 }
@@ -135,5 +295,8 @@ body {
 @media (max-width: 380px) {
   .grid-container {
     grid-template-columns: 1fr;
+  }
+  .sidebar {
+    width: 86%;
   }
 }
